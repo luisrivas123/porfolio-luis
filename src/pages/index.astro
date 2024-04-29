@@ -1,16 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
+
 import BriefCase from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
-import CodeIcon from "../components/icons/Code.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout
@@ -18,51 +16,11 @@ import CodeIcon from "../components/icons/Code.astro";
   description="Contrata a Luis Rivas para desarrollar tu página web. Especializado en desarrollo web."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
-      <img
-        class="rounded-full w-24 h-24 mb-4"
-        src="/image1.webp"
-        alt="Luis Rivas Photo"
-      />
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        Hey, soy Luis Rivas <a
-          href="https://linkedin.com/in/luis-e-rivas-bejarano-20a544141"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para Trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span>Desarrollador Web</span>, <span class="text-blue-200/90"
-          >Especializado en aplicaciones Frontend.</span
-        >
-        <span class="opacity-75"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-          delectus omnis illum.</span
-        >
-      </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill
-          href="https://linkedin.com/in/luis-e-rivas-bejarano-20a544141"
-        >
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/luisrivas123/api-integrations">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:rivasbejaranoluis@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          rivasbejaranoluis@gmail.com
-        </SocialPill>
-      </nav>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
     </SectionContainer>
-
+  </main>
+  <div class="space-y-24">
     <SectionContainer id="experiencia">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefCase class="size-7" />
@@ -78,5 +36,15 @@ import CodeIcon from "../components/icons/Code.astro";
       </h2>
       <Projects />
     </SectionContainer>
-  </main>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
 </Layout>
